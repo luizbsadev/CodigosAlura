@@ -19,6 +19,6 @@ public class MedicoController {
     public void cadastrar(@RequestBody DadosMedicoDTO dadosMedicoDTO){
         Medico medico = new Medico(dadosMedicoDTO);
         repository.save(medico);
-        System.out.println("Cadastro completo");
+
     }
 }
