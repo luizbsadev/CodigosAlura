@@ -1,4 +1,19 @@
 package med.voll.api.medico.dto;
 
-public record EnderecoDTO(String logradouro, String bairro, String cep, String cidade, String uf, String numero, String complemento) {
+import jakarta.validation.constraints.NotBlank;
+
+public record EnderecoDTO(
+        @NotBlank
+        String logradouro,
+        @NotBlank
+        String bairro,
+        @NotBlank
+        String cep,
+        @NotBlank
+        String cidade,
+        @NotBlank
+        String uf,
+        @NotBlank
+        String numero,
+        String complemento) {
 }
