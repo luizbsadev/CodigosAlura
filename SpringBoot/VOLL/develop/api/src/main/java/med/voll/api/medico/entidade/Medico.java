@@ -5,11 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.comum.entidade.Endereco;
 import med.voll.api.medico.dto.DadosMedicoDTO;
-import med.voll.api.medico.dto.EnderecoDTO;
 import med.voll.api.medico.dto.Especialidade;
-
-import java.util.Objects;
 
 @Entity
 @Table(name = "medicos")

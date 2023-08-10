@@ -1,10 +1,10 @@
-package med.voll.api.medico.entidade;
+package med.voll.api.comum.entidade;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.medico.dto.EnderecoDTO;
+import med.voll.api.comum.dto.EnderecoDTO;
 
 @Embeddable
 @Getter
@@ -13,7 +13,6 @@ import med.voll.api.medico.dto.EnderecoDTO;
 public class Endereco {
     private String logradouro;
     private String bairro;
-
     private String cep;
     private String cidade;
     private String uf;
