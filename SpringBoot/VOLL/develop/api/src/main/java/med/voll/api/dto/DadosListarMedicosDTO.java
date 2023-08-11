@@ -1,6 +1,7 @@
-package med.voll.api.medico.dto;
+package med.voll.api.dto;
 
-import med.voll.api.medico.entidade.Medico;
+import med.voll.api.entidade.Especialidade;
+import med.voll.api.entidade.Medico;
 
 public record DadosListarMedicosDTO(String nome, String email, String crm, Especialidade especialidade) {
     public DadosListarMedicosDTO(Medico medico){
