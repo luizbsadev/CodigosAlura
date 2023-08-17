@@ -28,5 +28,22 @@ public class Endereco {
         this.numero = enderecoDTO.numero();
         this.complemento = enderecoDTO.complemento();
     }
+
+    public void alterarEndereco(EnderecoDTO enderecoDTO) {
+        if(enderecoDTO.logradouro() != null)
+            this.logradouro = enderecoDTO.logradouro();
+        if(enderecoDTO.bairro() != null)
+            this.bairro = enderecoDTO.bairro();
+        if(enderecoDTO.cep() != null)
+            this.cep = enderecoDTO.cep();
+        if(enderecoDTO.cidade() != null)
+            this.cidade = enderecoDTO.cidade();
+        if(enderecoDTO.uf() != null)
+            this.uf = enderecoDTO.uf();
+        if(enderecoDTO.numero() != null)
+            this.numero = enderecoDTO.numero();
+        if(enderecoDTO.complemento() != null)
+            this.complemento = enderecoDTO.complemento();
+    }
 }
 

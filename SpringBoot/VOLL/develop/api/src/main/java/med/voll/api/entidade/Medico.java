@@ -5,7 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.dto.DadosMedicoDTO;
+import med.voll.api.dto.DadosCadastroMedicoDTO;
+import med.voll.api.dto.DadosAlterarMedicoDTO;
 
 @Entity
 @Table(name = "medicos")
@@ -34,12 +35,23 @@ public class Medico {
     private Endereco endereco;
 
 
-    public Medico(DadosMedicoDTO dadosMedicoDTO) {
+    public Medico(DadosCadastroMedicoDTO dadosMedicoDTO) {
         this.nome = dadosMedicoDTO.nome();
         this.email = dadosMedicoDTO.email();
         this.telefone = dadosMedicoDTO.telefone();
         this.crm = dadosMedicoDTO.crm();
         this.especialidade = dadosMedicoDTO.especialidade();
         this.endereco = new Endereco(dadosMedicoDTO.endereco());
+    }
+
+    public void alterarMedico(DadosAlterarMedicoDTO dados){
+        if(dados.nome() != null)
+            this.nome = dados.nome();
+        if(dados.telefone() != null)
+            this.telefone = dados.telefone();
+        if(dados.endereco() != null)
+            this.endereco.alterarEndereco(dados.endereco());
+
+
     }
 }
