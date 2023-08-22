@@ -34,6 +34,8 @@ public class Medico {
     @Embedded
     private Endereco endereco;
 
+    private Boolean ativo;
+
 
     public Medico(DadosCadastroMedicoDTO dadosMedicoDTO) {
         this.nome = dadosMedicoDTO.nome();
@@ -42,6 +44,7 @@ public class Medico {
         this.crm = dadosMedicoDTO.crm();
         this.especialidade = dadosMedicoDTO.especialidade();
         this.endereco = new Endereco(dadosMedicoDTO.endereco());
+        this.ativo = true;
     }
 
     public void alterarMedico(DadosAlterarMedicoDTO dados){
@@ -53,5 +56,9 @@ public class Medico {
             this.endereco.alterarEndereco(dados.endereco());
 
 
+    }
+
+    public void excluir() {
+        this.ativo = false;
     }
 }
