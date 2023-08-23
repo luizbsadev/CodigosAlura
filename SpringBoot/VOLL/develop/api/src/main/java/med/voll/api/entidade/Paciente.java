@@ -31,6 +31,8 @@ public class Paciente {
     @Embedded
     Endereco endereco;
 
+    Boolean ativo;
+
 
     public Paciente(DadosCadastroPacienteDTO dados){
         this.nome = dados.nome();
@@ -38,6 +40,7 @@ public class Paciente {
         this.email = dados.email();
         this.telefone = dados.telefone();
         this.endereco = new Endereco(dados.endereco());
+        this.ativo = true;
 
     }
 }
