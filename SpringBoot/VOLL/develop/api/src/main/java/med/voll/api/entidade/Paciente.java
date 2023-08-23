@@ -5,8 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.dto.DadosAlterarMedicoDTO;
 import med.voll.api.dto.DadosCadastroPacienteDTO;
 import med.voll.api.entidade.Endereco;
+import med.voll.api.medico.dto.DadosAlterarPacienteDTO;
 
 @EqualsAndHashCode(of = "id")
 @Getter
@@ -42,5 +44,14 @@ public class Paciente {
         this.endereco = new Endereco(dados.endereco());
         this.ativo = true;
 
+    }
+
+    public void alterar(DadosAlterarPacienteDTO dados) {
+        if(dados.nome() != null)
+            this.nome = dados.nome();
+        if(dados.telefone() != null)
+            this.telefone = dados.telefone();
+        if(dados.enderecoDTO() != null)
+            this.endereco.alterarEndereco(dados.enderecoDTO());
     }
 }
