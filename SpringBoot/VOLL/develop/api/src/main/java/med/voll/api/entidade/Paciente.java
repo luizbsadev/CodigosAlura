@@ -54,4 +54,8 @@ public class Paciente {
         if(dados.enderecoDTO() != null)
             this.endereco.alterarEndereco(dados.enderecoDTO());
     }
+
+    public void excluir() {
+        this.ativo = false;
+    }
 }
