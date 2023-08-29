@@ -21,7 +21,7 @@ public class PacienteController {
     PacienteRepository repository;
 
     @PostMapping
-    public void cadastrar(@RequestBody @Valid DadosCadastroPacienteDTO dados){
+    public void cadastrarPaciente(@RequestBody @Valid DadosCadastroPacienteDTO dados){
         repository.save(new Paciente(dados));
     }
 
@@ -39,7 +39,7 @@ public class PacienteController {
 
     @Transactional
     @DeleteMapping("/{id}")
-    public void deletarPaciente(@PathVariable Long id){
+    public void excluirPaciente(@PathVariable Long id){
         Paciente paciente = repository.getReferenceById(id);
         paciente.excluir();
     }
