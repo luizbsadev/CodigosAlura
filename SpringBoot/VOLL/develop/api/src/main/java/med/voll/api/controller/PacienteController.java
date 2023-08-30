@@ -5,7 +5,7 @@ import jakarta.validation.Valid;
 import med.voll.api.dto.DadosCadastroPacienteDTO;
 import med.voll.api.dto.DadosListarPacienteDTO;
 import med.voll.api.entidade.Paciente;
-import med.voll.api.medico.dto.DadosAlterarPacienteDTO;
+import med.voll.api.dto.DadosAlterarPacienteDTO;
 import med.voll.api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

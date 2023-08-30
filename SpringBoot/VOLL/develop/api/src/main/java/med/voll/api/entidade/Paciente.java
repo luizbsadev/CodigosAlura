@@ -5,10 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.dto.DadosAlterarMedicoDTO;
 import med.voll.api.dto.DadosCadastroPacienteDTO;
-import med.voll.api.entidade.Endereco;
-import med.voll.api.medico.dto.DadosAlterarPacienteDTO;
+import med.voll.api.dto.DadosAlterarPacienteDTO;
 
 @EqualsAndHashCode(of = "id")
 @Getter
