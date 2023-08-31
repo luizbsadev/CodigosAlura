@@ -16,4 +16,5 @@ public record EnderecoDTO(
         @NotBlank
         String numero,
         String complemento) {
+
 }
