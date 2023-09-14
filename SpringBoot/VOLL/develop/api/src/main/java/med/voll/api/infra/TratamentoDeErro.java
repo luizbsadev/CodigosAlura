@@ -1,7 +1,7 @@
 package med.voll.api.infra;
 
 import jakarta.persistence.EntityNotFoundException;
-import med.voll.api.dto.DadosMensagemErro400;
+import med.voll.api.dto.DadosMensagemErro400DTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -20,7 +20,7 @@ public class TratamentoDeErro {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity tratarErro400(MethodArgumentNotValidException exception){
         List<FieldError> fieldErros = exception.getFieldErrors();
-        List listaErros = fieldErros.stream().map(DadosMensagemErro400::new).toList();
+        List listaErros = fieldErros.stream().map(DadosMensagemErro400DTO::new).toList();
         return ResponseEntity.badRequest().body(listaErros);
 
     }
