@@ -2,12 +2,13 @@ package med.voll.api.service.validacao;
 
 import med.voll.api.dto.DadosMarcarConsultaDTO;
 import med.voll.api.exception.ValidacaoException;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDate;
-import java.time.chrono.ChronoLocalDateTime;
 
+
+@Component
 public class ValidacaoChecarAntecedenciaConsulta implements ValidacaoConsultaInterface{
 
     @Override
